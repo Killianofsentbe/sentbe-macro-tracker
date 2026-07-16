@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SentBe 시장 브리핑 — 2026-07-05 저녁</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+<style>
+  :root {
+    --color-primary:#1462FC;--color-g0:#FFFFFF;--color-g100:#F7F8FB;--color-g150:#F0F2F7;
+    --color-g200:#E9ECF1;--color-g250:#E3E6EB;--color-g400:#9D9FA1;--color-g450:#797B7D;
+    --color-g500:#525357;--color-g700:#37373D;--color-g800:#2A2A2E;--color-g900:#1A1A1A;
+    --color-sb150:#EBF2FE;--color-r100:#FBF9F9;--color-r500:#F86464;
+    --color-gr100:#F8FDFB;--color-gr500:#3DBE9D;
+    --shadow-card:0px 8px 32px 4px rgba(0,0,0,0.06);
+    --shadow-sm:0px 2px 12px 0px rgba(0,0,0,0.06);
+    --radius-sm:8px;--radius-md:12px;--radius-pill:9999px;
+    --font-body:'Pretendard Variable','Pretendard',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    --color-header:#1A1A1A;
+  }
+  body.dark {
+    --color-g0:#1C1C24;--color-g100:#13131A;--color-g150:#1C1C25;
+    --color-g200:#26262F;--color-g250:#32323C;--color-g400:#666670;
+    --color-g450:#888893;--color-g500:#AAAAB0;--color-g700:#CCCCDA;
+    --color-g800:#DDDDE8;--color-g900:#EEEEF5;
+    --color-sb150:#1B2B45;--color-r100:#2B1515;--color-gr100:#152B23;
+    --shadow-card:0px 8px 32px 4px rgba(0,0,0,0.35);
+    --shadow-sm:0px 2px 12px 0px rgba(0,0,0,0.25);
+  }
+  body.dark .header{background:#0D0D14}
+  body.dark .status-bad{background:#2B1515;border-color:#7F1D1D;color:#F87171}
+  body.dark .status-good{background:#152B23;border-color:#065F46;color:#34D399}
+  body.dark .status-watch{background:#2B2410;border-color:#92400E;color:#FBBF24}
+  body.lang-en .ko-only{display:none}
+  body.lang-en .en-only{display:block}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:var(--font-body);background:var(--color-g100);color:var(--color-g900);font-size:14px;line-height:1.5;letter-spacing:0.001em}
+  .header{background:var(--color-header);color:var(--color-g0);padding:20px 32px;display:flex;align-items:center;justify-content:space-between}
+  .toggle-group{display:flex;gap:8px;align-items:center}
+  .toggle-btn{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:#fff;border-radius:var(--radius-pill);padding:5px 12px;font-size:12px;font-weight:600;cursor:pointer;transition:all 0.15s;font-family:var(--font-body)}
+  .toggle-btn:hover{background:rgba(255,255,255,0.22)}
+  .ko-note{display:none;font-size:11px;color:var(--color-g400);margin-bottom:10px;font-style:italic}
+  body.lang-en .ko-note{display:block}
+  .header h1{font-size:18px;font-weight:700;letter-spacing:-0.015em}
+  .header .sub{font-size:12px;color:var(--color-g400);margin-top:4px}
+  .container{max-width:1100px;margin:0 auto;padding:28px 20px}
+  .back-link{color:var(--color-primary);font-size:14px;font-weight:600;text-decoration:none;display:inline-block;margin-bottom:20px}
+  .back-link:hover{text-decoration:underline}
+  .briefing-header{display:flex;align-items:center;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+  .session-badge{background:var(--color-primary);color:var(--color-g0);padding:4px 12px;border-radius:var(--radius-pill);font-size:12px;font-weight:700;letter-spacing:-0.015em}
+  .briefing-date{color:var(--color-g450);font-size:13px}
+  .metrics-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:12px;margin-bottom:20px}
+  .metric-card{background:var(--color-g0);border-radius:var(--radius-md);padding:16px 20px;border:1px solid var(--color-g200);box-shadow:var(--shadow-sm)}
+  .metric-label{font-size:12px;color:var(--color-g450);margin-bottom:6px;font-weight:500}
+  .metric-value{font-size:22px;font-weight:700;letter-spacing:-0.015em;color:var(--color-g900)}
+  .metric-change{font-size:12px;margin-top:4px;font-weight:600;letter-spacing:-0.015em}
+  .metric-prev{font-size:11px;color:var(--color-g450);margin-top:6px;padding-top:6px;border-top:1px solid var(--color-g200)}
+  .up{color:var(--color-r500)}.down{color:var(--color-primary)}.neutral{color:var(--color-g400)}
+  .card{background:var(--color-g0);border-radius:var(--radius-md);padding:24px;border:1px solid var(--color-g200);box-shadow:var(--shadow-card);margin-bottom:16px}
+  .card h3{font-size:15px;font-weight:700;letter-spacing:-0.015em;margin-bottom:12px;color:var(--color-g800)}
+  .card p{font-size:14px;line-height:1.8;color:var(--color-g700)}
+  .regime-badge{display:inline-flex;align-items:center;gap:6px;padding:5px 14px;border-radius:var(--radius-pill);font-size:13px;font-weight:600;letter-spacing:-0.015em;margin-bottom:16px}
+  .regime-risk-off{background:var(--color-r100);color:var(--color-r500)}
+  .regime-risk-on{background:var(--color-gr100);color:var(--color-gr500)}
+  .regime-neutral{background:var(--color-g150);color:var(--color-g500)}
+  .easy-summary{background:var(--color-sb150);border-radius:var(--radius-sm);padding:14px 18px;font-size:15px;font-weight:600;line-height:1.75;color:var(--color-g900);margin-bottom:14px;border-left:4px solid var(--color-primary)}
+  .easy-detail{font-size:14px;line-height:1.9;color:var(--color-g700)}
+  .sentbe-status-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px}
+  .status-card{border-radius:var(--radius-md);padding:16px 12px;text-align:center;border:1px solid transparent}
+  .status-icon{font-size:22px;margin-bottom:6px}
+  .status-channel{font-size:11px;font-weight:600;letter-spacing:-0.01em;opacity:0.7;margin-bottom:4px}
+  .status-label{font-size:13px;font-weight:700;letter-spacing:-0.015em;line-height:1.3}
+  .status-bad{background:#FEF2F2;border-color:#FECACA;color:#DC2626}
+  .status-good{background:var(--color-gr100);border-color:#A7F3D0;color:#059669}
+  .status-watch{background:#FFFBEB;border-color:#FDE68A;color:#D97706}
+  .status-neutral{background:var(--color-g100);border-color:var(--color-g250);color:var(--color-g500)}
+  .sentbe-detail{font-size:14px;line-height:1.9;color:var(--color-g700);padding-top:14px;border-top:1px solid var(--color-g200);margin-top:4px}
+  @media(max-width:600px){.sentbe-status-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <h1 data-ko="📊 SentBe 시장 브리핑" data-en="📊 SentBe Market Briefing">📊 SentBe 시장 브리핑</h1>
+    <div class="sub" data-ko="한·미 거시지표 데일리 브리핑 — 내부 참고용" data-en="Daily Korea-US Macro Briefing — Internal Use">한·미 거시지표 데일리 브리핑 — 내부 참고용</div>
+  </div>
+  <div class="toggle-group">
+    <button class="toggle-btn" id="btn-lang" onclick="toggleLang()">EN</button>
+    <button class="toggle-btn" id="btn-dark" onclick="toggleDark()">🌙</button>
+  </div>
+</div>
+
+<div class="container">
+  <a href="../index.html" class="back-link" data-ko="← 목록으로" data-en="← Back to list">← 목록으로</a>
+  
+  <div class="briefing-header">
+    <span class="session-badge" data-ko="저녁" data-en="PM">저녁</span>
+    <span class="briefing-date">2026-07-05 01:44 KST</span>
+    <span style="font-size:12px;color:var(--color-g400)" data-ko="전 세션: 2026-07-05 오전" data-en="Prev: 2026-07-05 AM">전 세션: 2026-07-05 오전</span>
+  </div>
+  <span class="regime-badge regime-risk-on" data-ko="🟢 리스크온 (위험 자산 선호)" data-en="🟢 Risk-On (Risk Appetite)">🟢 리스크온 (위험 자산 선호)</span>
+
+  <div class="metrics-grid">
+    <div class="metric-card">
+      <div class="metric-label" data-ko="원/달러 환율" data-en="USD/KRW">원/달러 환율</div>
+      <div class="metric-value">1,530.15</div>
+      <div class="metric-change"> <span data-ko="전일" data-en="1D">전일</span> &nbsp;|&nbsp; <span data-ko="월간" data-en="MoM">월간</span> +—%</div>
+      <div class="metric-prev"><span data-ko="전 세션 대비" data-en="vs Prev">전 세션 대비</span> <span class="neutral">− 0.00원</span></div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label" data-ko="미 10년물 금리" data-en="US 10Y Yield">미 10년물 금리</div>
+      <div class="metric-value">4.485%</div>
+      <div class="metric-change"></div>
+      <div class="metric-prev"><span data-ko="전 세션 대비" data-en="vs Prev">전 세션 대비</span> <span class="neutral">− 0.000%p</span></div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label" data-ko="금 (USD/oz)" data-en="Gold (USD/oz)">금 (USD/oz)</div>
+      <div class="metric-value">$4,187.00</div>
+      <div class="metric-change"></div>
+      <div class="metric-prev"><span data-ko="전 세션 대비" data-en="vs Prev">전 세션 대비</span> <span class="down">▼ -0.3$</span></div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label" data-ko="비트코인" data-en="Bitcoin">비트코인</div>
+      <div class="metric-value">$62,845</div>
+      <div class="metric-change"></div>
+      <div class="metric-prev"><span data-ko="전 세션 대비" data-en="vs Prev">전 세션 대비</span> <span class="up">▲ +290$</span></div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label" data-ko="코스피" data-en="KOSPI">코스피</div>
+      <div class="metric-value">8,088.00</div>
+      <div class="metric-change"><span class="down">▼3.84%</span></div>
+      <div class="metric-prev"><span data-ko="전 세션 대비" data-en="vs Prev">전 세션 대비</span> <span class="down">▼ -0.34p</span></div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label" data-ko="나스닥" data-en="NASDAQ">나스닥</div>
+      <div class="metric-value">25,832.00</div>
+      <div class="metric-change"><span class="up">▲1.87%</span></div>
+      <div class="metric-prev"><span data-ko="전 세션 대비" data-en="vs Prev">전 세션 대비</span> <span class="down">▼ -0.67p</span></div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label" data-ko="BTC 김프" data-en="BTC Kimchi">BTC 김프</div>
+      <div class="metric-value neutral">-1.35%</div>
+      <div class="metric-change" style="font-size:11px;color:var(--color-g400)" data-ko="차익 임계: +4%" data-en="Arb threshold: +4%">차익 임계: +4%</div>
+      <div class="metric-prev"><span data-ko="전 세션 대비" data-en="vs Prev">전 세션 대비</span> <span class="down">▼ -0.10%p</span></div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label" data-ko="USDT 김프" data-en="USDT Kimchi">USDT 김프</div>
+      <div class="metric-value neutral">-1.38%</div>
+      <div class="metric-change" style="font-size:11px;color:var(--color-g400)" data-ko="차익 임계: -2.5~-3%" data-en="Arb threshold: -2.5~-3%">차익 임계: -2.5~-3%</div>
+      <div class="metric-prev"><span data-ko="전 세션 대비" data-en="vs Prev">전 세션 대비</span> <span class="down">▼ -0.13%p</span></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3 data-ko="💬 쉬운 말 풀이" data-en="💬 In Plain Terms">💬 쉬운 말 풀이</h3>
+    <div class="easy-summary ko-only">미국 증시는 경기 낙관에 급등했으나, 코스피는 홀로 급락하며 한·미 증시 디커플링이 뚜렷하게 나타난 하루.
+
+코스피 -3.84%의 핵심 원인은 외국인 韓주식 순매도로 추정되며, 이 매도 자금이 원화→달러 환전으로 연결돼 원/달러 하락폭을 제한하는 방향으로 작용했을 가능성이 있다.</div><p class="easy-detail ko-only">동시에 美 10Y 금리 상승(+2.58%)은 달러 강세 압력을 유지시켜 원화 추가 강세를 억누르고 있으며, 금·BTC 동반 급등은 "금리 상승에도 불구한 위험·안전 동시 선호"라는 혼재 국면을 시사한다.</p><p class="ko-note en-only" style="display:none">⚠️ English summary not available. Showing Korean content.</p><div class="easy-summary en-only" style="display:none">미국 증시는 경기 낙관에 급등했으나, 코스피는 홀로 급락하며 한·미 증시 디커플링이 뚜렷하게 나타난 하루.
+
+코스피 -3.84%의 핵심 원인은 외국인 韓주식 순매도로 추정되며, 이 매도 자금이 원화→달러 환전으로 연결돼 원/달러 하락폭을 제한하는 방향으로 작용했을 가능성이 있다.</div><p class="easy-detail en-only" style="display:none">동시에 美 10Y 금리 상승(+2.58%)은 달러 강세 압력을 유지시켜 원화 추가 강세를 억누르고 있으며, 금·BTC 동반 급등은 "금리 상승에도 불구한 위험·안전 동시 선호"라는 혼재 국면을 시사한다.</p>
+  </div>
+
+  <div class="card">
+    <h3 data-ko="🏦 오늘 우리 비즈니스는?" data-en="🏦 SentBe Impact Today">🏦 오늘 우리 비즈니스는?</h3>
+    <div class="sentbe-status-grid"><div class="status-card status-watch"><div class="status-icon">📤</div><div class="status-channel" data-ko="해외 송금" data-en="Outbound">해외 송금</div><div class="status-label" data-ko="수요 회복 조짐" data-en="Recovery Signs">수요 회복 조짐</div></div><div class="status-card status-bad"><div class="status-icon">₿</div><div class="status-channel" data-ko="BTC 경로" data-en="BTC Route">BTC 경로</div><div class="status-label" data-ko="차익 없음" data-en="No Arb">차익 없음</div></div><div class="status-card status-bad"><div class="status-icon">💵</div><div class="status-channel" data-ko="USDT 오프램프" data-en="USDT Off-Ramp">USDT 오프램프</div><div class="status-label" data-ko="차익 없음" data-en="No Arb">차익 없음</div></div></div><p class="ko-note">⚠️ This analysis is available in Korean only. Use Google Translate if needed.</p><p class="sentbe-detail"></p>
+  </div>
+</div>
+
+<script>
+function applyPrefs() {
+  const dark = localStorage.getItem('sb-dark') === '1';
+  const lang = localStorage.getItem('sb-lang') || 'ko';
+  if (dark) document.body.classList.add('dark');
+  document.getElementById('btn-dark').textContent = dark ? '☀️' : '🌙';
+  if (lang === 'en') {
+    document.body.classList.add('lang-en');
+    document.getElementById('btn-lang').textContent = 'KR';
+  } else {
+    document.getElementById('btn-lang').textContent = 'EN';
+  }
+  switchLang(lang);
+}
+function toggleDark() {
+  const isDark = document.body.classList.toggle('dark');
+  localStorage.setItem('sb-dark', isDark ? '1' : '0');
+  document.getElementById('btn-dark').textContent = isDark ? '☀️' : '🌙';
+}
+function toggleLang() {
+  const isEn = document.body.classList.toggle('lang-en');
+  localStorage.setItem('sb-lang', isEn ? 'en' : 'ko');
+  document.getElementById('btn-lang').textContent = isEn ? 'KR' : 'EN';
+  switchLang(isEn ? 'en' : 'ko');
+}
+function switchLang(lang) {
+  document.querySelectorAll('[data-ko][data-en]').forEach(function(el) {
+    el.textContent = lang === 'en' ? el.dataset.en : el.dataset.ko;
+  });
+  if (lang === 'en') {
+    document.querySelectorAll('.en-only').forEach(function(el) { el.style.display = ''; });
+    document.querySelectorAll('.ko-only').forEach(function(el) { el.style.display = 'none'; });
+  } else {
+    document.querySelectorAll('.ko-only').forEach(function(el) { el.style.display = ''; });
+    document.querySelectorAll('.en-only').forEach(function(el) { el.style.display = 'none'; });
+  }
+}
+applyPrefs();
+</script>
+</body></html>
