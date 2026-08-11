@@ -223,9 +223,14 @@
         <p class="chart-comment"><span class="ko-only">최근 8세션: 4.651 → 4.699 (▲ +0.048%p) · 구간 최고치</span><span class="en-only" style="display:none">Last 8 sessions: 4.651 → 4.699 (▲ +0.048%p) · Period high</span></p>
       </div>
       <div class="chart-card">
-        <h3 data-ko="코스피 / 나스닥" data-en="KOSPI / NASDAQ">코스피 / 나스닥</h3>
-        <div class="chart-wrap"><canvas id="chartEquity"></canvas></div>
-        <p class="chart-comment"><span class="ko-only"><span style="display:block">코스피 — 최근 8세션: 6,296.38 → 6,358.50 (▲ +62.12p) · 구간 최고치</span><span style="display:block;margin-top:4px">나스닥 — 최근 8세션: 26,118.50 → 26,605.36 (▲ +486.86p) · 구간 최고치</span></span><span class="en-only" style="display:none"><span style="display:block">KOSPI — Last 8 sessions: 6,296.38 → 6,358.50 (▲ +62.12p) · Period high</span><span style="display:block;margin-top:4px">NASDAQ — Last 8 sessions: 26,118.50 → 26,605.36 (▲ +486.86p) · Period high</span></span></p>
+        <h3 data-ko="코스피" data-en="KOSPI">코스피</h3>
+        <div class="chart-wrap"><canvas id="chartKospi"></canvas></div>
+        <p class="chart-comment"><span class="ko-only">최근 8세션: 6,296.38 → 6,358.50 (▲ +62.12p) · 구간 최고치</span><span class="en-only" style="display:none">Last 8 sessions: 6,296.38 → 6,358.50 (▲ +62.12p) · Period high</span></p>
+      </div>
+      <div class="chart-card">
+        <h3 data-ko="나스닥" data-en="NASDAQ">나스닥</h3>
+        <div class="chart-wrap"><canvas id="chartNasdaq"></canvas></div>
+        <p class="chart-comment"><span class="ko-only">최근 8세션: 26,118.50 → 26,605.36 (▲ +486.86p) · 구간 최고치</span><span class="en-only" style="display:none">Last 8 sessions: 26,118.50 → 26,605.36 (▲ +486.86p) · Period high</span></p>
       </div>
       <div class="chart-card">
         <h3 data-ko="BTC 김프/역프 (%)" data-en="BTC Kimchi Premium (%)">BTC 김프/역프 (%)</h3>
@@ -9922,7 +9927,7 @@ function hideDetail() {
 }
 
 let chartsInited = false;
-let chartFX, chartRate, chartEquity, chartKimchi;
+let chartFX, chartRate, chartKospi, chartNasdaq, chartKimchi;
 function initCharts() {
   if (chartsInited) return;
   chartsInited = true;
@@ -9938,11 +9943,11 @@ function initCharts() {
   chartRate = new Chart(document.getElementById('chartRate'), { type: 'line', data: {
     labels, datasets: [{ label: '미 10Y', data: chartData.us_10y, borderColor: '#f72585', tension: 0.3, fill: false }]
   }, options: opts });
-  chartEquity = new Chart(document.getElementById('chartEquity'), { type: 'line', data: {
-    labels, datasets: [
-      { label: '코스피', data: chartData.kospi, borderColor: '#4361ee', tension: 0.3, fill: false },
-      { label: '나스닥', data: chartData.nasdaq, borderColor: '#f72585', tension: 0.3, fill: false }
-    ]
+  chartKospi = new Chart(document.getElementById('chartKospi'), { type: 'line', data: {
+    labels, datasets: [{ label: '코스피', data: chartData.kospi, borderColor: '#4361ee', tension: 0.3, fill: false }]
+  }, options: opts });
+  chartNasdaq = new Chart(document.getElementById('chartNasdaq'), { type: 'line', data: {
+    labels, datasets: [{ label: '나스닥', data: chartData.nasdaq, borderColor: '#f72585', tension: 0.3, fill: false }]
   }, options: opts });
   chartKimchi = new Chart(document.getElementById('chartKimchi'), { type: 'line', data: {
     labels, datasets: [
@@ -9958,8 +9963,8 @@ function updateChartLabels(lang) {
   const en = lang === 'en';
   chartFX.data.datasets[0].label = en ? 'USD/KRW' : '원/달러'; chartFX.update('none');
   chartRate.data.datasets[0].label = en ? 'US 10Y' : '미 10Y'; chartRate.update('none');
-  chartEquity.data.datasets[0].label = en ? 'KOSPI' : '코스피';
-  chartEquity.data.datasets[1].label = en ? 'NASDAQ' : '나스닥'; chartEquity.update('none');
+  chartKospi.data.datasets[0].label = en ? 'KOSPI' : '코스피'; chartKospi.update('none');
+  chartNasdaq.data.datasets[0].label = en ? 'NASDAQ' : '나스닥'; chartNasdaq.update('none');
   chartKimchi.data.datasets[0].label = en ? 'BTC Kimchi' : 'BTC 김프';
   chartKimchi.data.datasets[1].label = en ? 'USDT Kimchi' : 'USDT 김프'; chartKimchi.update('none');
 }
